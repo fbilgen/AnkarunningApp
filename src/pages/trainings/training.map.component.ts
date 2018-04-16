@@ -52,7 +52,7 @@ export class TrainingMapPage {
           lng: route.longitude
         },
         zoom: 14,
-        tilt: 30,
+        tilt: 0,
       }
     };
 
