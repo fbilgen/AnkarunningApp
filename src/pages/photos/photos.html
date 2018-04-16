@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Photos
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+           <ion-col col-4 col-md-4 col-xl-3 *ngFor="let img of photos" >                  
+                    <div class="image-container" [style.background-image]="'url(./assets/images/Photos' + img.num + '.jpg)'" (click)="goToPhoto(img.num)"></div>       
+            </ion-col>    
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title class="center">
+          Antrenman Rotaları
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+        <ion-slides pager >
+            <ion-slide *ngFor="let route of routes">
+              <ion-card>
+                <img src="http://ankarunning.eu-west-1.elasticbeanstalk.com/Home/DownloadRoutePhoto?routeId={{route?.id}}">
+                <ion-card-content>
+                  <ion-card-title>
+             
+                  </ion-card-title>
+                  <p>
+                   {{route?.name}}
+                  </p>
+                </ion-card-content>
+              </ion-card>
+            </ion-slide>
+          </ion-slides>
+          
+    
+</ion-content>

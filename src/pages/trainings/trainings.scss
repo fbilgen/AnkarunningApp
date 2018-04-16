@@ -1,0 +1,27 @@
+page-trainings {
+  .larger-icon {
+    font-size: 24px;
+  }
+  .pull-top {
+    margin-top: -30px !important;
+  }
+  .item-inner {
+    margin-left: 0px !important;
+  }
+  .card-ios {
+      margin: 0 !important;
+      display: inline;
+  }
+  .card-image{
+    min-height: 70%;
+    width: 100%;
+    background-size: cover; 
+    // background-position-x: 50%;
+    // background-position-y: 50%;
+  }
+
+  ion-col button {
+    margin:0 !important;
+  }
+
+}

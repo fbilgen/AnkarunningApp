@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="center">
+      Gelecek Program
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)" pullMin="150">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <!-- Future Training Plans -->
+  <ion-card>
+    <!-- <div style="background-image:url('./assets/images/Photos3.jpg')" class="card-image"></div> -->
+    <!-- <img src="./assets/images/photo12.jpg" > -->
+    <img src="data:image/jpg;base64,{{futureTraining?.trainingPhoto.content}}" />
+
+    <ion-card-content>
+      <!-- <p style="color:#666">{{ futureTraining?.dateTime | amDifference :null :'days' : false }} days left! </p> -->
+      <p class='silence'> {{ daysLeft }} gün kaldı! </p>
+      <ion-card-title>
+        {{ futureTraining?.title }}
+      </ion-card-title>
+      <p>{{ futureTraining?.description }}</p>
+    </ion-card-content>
+    <ion-row>
+        <ion-col no-padding>
+          <ion-item >
+            <!--<ion-icon name="calendar" item-left class="larger-icon pull-top"></ion-icon>-->
+            <i item-left class="fa fa-2x fa-calendar pull-top" aria-hidden="true"></i>
+            <p>&nbsp; {{ futureTraining?.route }}</p>
+            <p>&nbsp; {{ futureTraining?.dateTime| amLocale:'tr' | amDateFormat:'LL'}}</p>
+            <p>&nbsp; {{ futureTraining?.dateTime | date:'H:mm'}}</p>
+            <p>&nbsp; {{ futureTraining?.distance }}km  |  {{futureTraining?.avgPace }}/km</p>
+          </ion-item>
+        </ion-col>
+        <ion-col no-padding text-right>
+          <button ion-button clear large color="default" icon-start (click)="goToMap(futureTraining.routeId)">
+            <i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
+            <!--<ion-icon name='pin'></ion-icon>-->
+          </button>
+        </ion-col>
+      </ion-row>
+  </ion-card>
+  <!-- <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+
+</ion-content>
