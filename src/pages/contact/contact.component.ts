@@ -57,7 +57,7 @@ export class ContactPage {
     }
 
     callUs() {
-         this.call.callNumber("+905346518901", true)
+         this.call.callNumber("+903121119999", true)
             .then(res => console.log('Launched dialer!', res))
             .catch(err => console.log('Error launching dialer', err)); 
     }
