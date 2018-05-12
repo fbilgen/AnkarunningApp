@@ -20,6 +20,8 @@ import { GoogleMaps} from '@ionic-native/google-maps';
 import { RoutesService } from '../providers/trainings/routes.service';
 import { MomentModule } from 'angular2-moment';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { AppAvailability } from '@ionic-native/app-availability';
+import { CallNumber } from '@ionic-native/call-number';
 
 
 @NgModule({
@@ -56,6 +58,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GoogleMaps,
     InAppBrowser,
+    AppAvailability,
+    CallNumber,
     TrainingsService,
     RoutesService
   ]

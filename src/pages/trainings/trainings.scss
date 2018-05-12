@@ -24,4 +24,8 @@ page-trainings {
     margin:0 !important;
   }
 
+  .item > ion-icon:first-child, .item-inner > ion-icon:first-child{
+    min-width: 28px !important;
+  }
+
 }

@@ -12,7 +12,7 @@
     </ion-refresher-content>
   </ion-refresher>
   <!-- Future Training Plans -->
-  <ion-card>
+  <ion-card *ngIf="futureTraining">
     <!-- <div style="background-image:url('./assets/images/Photos3.jpg')" class="card-image"></div> -->
     <!-- <img src="./assets/images/photo12.jpg" > -->
     <img src="data:image/jpg;base64,{{futureTraining?.trainingPhoto.content}}" />
@@ -24,25 +24,28 @@
         {{ futureTraining?.title }}
       </ion-card-title>
       <p>{{ futureTraining?.description }}</p>
+      <!--<ion-icon name="calendar" item-left class="larger-icon pull-top"></ion-icon>-->
     </ion-card-content>
-    <ion-row>
-        <ion-col no-padding>
-          <ion-item >
-            <!--<ion-icon name="calendar" item-left class="larger-icon pull-top"></ion-icon>-->
-            <i item-left class="fa fa-2x fa-calendar pull-top" aria-hidden="true"></i>
-            <p>&nbsp; {{ futureTraining?.route }}</p>
-            <p>&nbsp; {{ futureTraining?.dateTime| amLocale:'tr' | amDateFormat:'LL'}}</p>
-            <p>&nbsp; {{ futureTraining?.dateTime | date:'H:mm'}}</p>
-            <p>&nbsp; {{ futureTraining?.distance }}km  |  {{futureTraining?.avgPace }}/km</p>
-          </ion-item>
-        </ion-col>
-        <ion-col no-padding text-right>
-          <button ion-button clear large color="default" icon-start (click)="goToMap(futureTraining.routeId)">
-            <i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
-            <!--<ion-icon name='pin'></ion-icon>-->
-          </button>
-        </ion-col>
-      </ion-row>
+
+    <ion-item (click)="goToMap(futureTraining.routeId)">
+      <ion-icon item-start> <i class="fa fa-map-marker" aria-hidden="true"></i></ion-icon>
+      <!-- <i item-start class="fa fa-2x fa-map-marker" aria-hidden="true"></i> -->
+      <p>{{ futureTraining?.route }}</p>
+    </ion-item>
+    <ion-item>
+        <ion-icon item-start ><i class="fa fa-calendar" aria-hidden="true" ></i></ion-icon>
+      <!-- <i item-start class="fa fa-2x fa-calendar" aria-hidden="true"></i> -->
+      <p>{{ futureTraining?.dateTime| amLocale:'tr' | amDateFormat:'D MMMM dddd'}} </p>
+      <p>{{ futureTraining?.dateTime | date:'H:mm'}}</p>
+    </ion-item>
+    <ion-item >
+      <ion-icon item-start> <i class="fa fa-flag-checkered" aria-hidden="true"></i></ion-icon>     
+      <p>{{ futureTraining?.distance }}km | {{futureTraining?.avgPace }}/km</p>
+    </ion-item>
+
+
+
+
   </ion-card>
   <!-- <ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())">
     <ion-infinite-scroll-content></ion-infinite-scroll-content>

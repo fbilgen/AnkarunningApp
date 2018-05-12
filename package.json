@@ -20,6 +20,8 @@
     "@angular/http": "5.0.3",
     "@angular/platform-browser": "5.0.3",
     "@angular/platform-browser-dynamic": "5.0.3",
+    "@ionic-native/app-availability": "^4.7.0",
+    "@ionic-native/call-number": "^4.7.0",
     "@ionic-native/core": "4.4.0",
     "@ionic-native/google-maps": "^4.6.0",
     "@ionic-native/in-app-browser": "^4.6.0",
@@ -30,6 +32,7 @@
     "@types/moment": "^2.13.0",
     "angular-2-holderjs": "^1.0.1",
     "angular2-moment": "^1.8.0",
+    "call-number": "^1.0.1",
     "cordova-browser": "5.0.3",
     "cordova-ios": "4.5.4",
     "cordova-plugin-device": "^2.0.1",
@@ -68,7 +71,9 @@
         "LOCATION_ALWAYS_USAGE_DESCRIPTION": "This app wants to get your location always, even this app runs in background."
       },
       "cordova-plugin-inappbrowser": {},
-      "cordova-plugin-x-toast": {}
+      "cordova-plugin-x-toast": {},
+      "cordova-plugin-appavailability": {},
+      "mx.ferreyra.callnumber": {}
     },
     "platforms": [
       "ios",

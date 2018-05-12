@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core'
-import { NavController, LoadingController, DateTime, Slides } from 'ionic-angular'
+import { NavController } from 'ionic-angular'
 import { DatePipe } from '@angular/common';
 
 import { RouteModel } from '../../models/RouteModel';

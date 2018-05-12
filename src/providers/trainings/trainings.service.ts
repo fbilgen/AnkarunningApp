@@ -1,9 +1,8 @@
 
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpErrorResponse, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { catchError, retry, map } from 'rxjs/operators';
-import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+import { catchError, retry } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
 
 import { TrainingModel } from '../../models/TrainingModel';
