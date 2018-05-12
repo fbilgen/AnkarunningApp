@@ -16,12 +16,13 @@ import { TrainingsService } from '../providers/trainings/trainings.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { GoogleMaps} from '@ionic-native/google-maps';
+import { GoogleMaps } from '@ionic-native/google-maps';
 import { RoutesService } from '../providers/trainings/routes.service';
 import { MomentModule } from 'angular2-moment';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { AppAvailability } from '@ionic-native/app-availability';
 import { CallNumber } from '@ionic-native/call-number';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 
 @NgModule({
@@ -55,13 +56,14 @@ import { CallNumber } from '@ionic-native/call-number';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     GoogleMaps,
     InAppBrowser,
     AppAvailability,
     CallNumber,
+    EmailComposer,
     TrainingsService,
     RoutesService
   ]
 })
-export class AppModule {}
+export class AppModule { }

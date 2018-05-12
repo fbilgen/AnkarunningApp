@@ -1,8 +1,9 @@
 import { Component } from '@angular/core'
-import { NavController, Platform } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { AppAvailability } from '@ionic-native/app-availability';
 import { CallNumber } from '@ionic-native/call-number';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 @Component({
     selector: 'page-contact',
@@ -11,11 +12,11 @@ import { CallNumber } from '@ionic-native/call-number';
 
 export class ContactPage {
     constructor(
-        private navCtrl: NavController,
         private iab: InAppBrowser,
         private appAvailability: AppAvailability,
         private platform: Platform,
-        private call: CallNumber
+        private call: CallNumber,
+        private emailComposer: EmailComposer
     ) { }
 
     launchExternalApp(iosSchemaName: string, androidPackageName: string, appUrl: string, httpUrl: string, username: string) {
@@ -63,5 +64,20 @@ export class ContactPage {
 
     emailUs() {
 
+        this.emailComposer.isAvailable().then((available: boolean) =>{
+            if(available) {
+              //Now we know we can send
+              //!!!! this is not working even though I have an email composer. so skip this part.       
+            }
+           });
+
+           let email = {
+            to: 'info@ankarunning.com', 
+            subject: 'Bir sorum Var',
+            isHtml: true
+          };
+          
+          // Send a text message using default options. If not email account exists; a popup is shown as default.
+          this.emailComposer.open(email).catch(err => console.log('Error launching email', err));
     }
 }

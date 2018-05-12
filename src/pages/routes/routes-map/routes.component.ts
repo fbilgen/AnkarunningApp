@@ -1,8 +1,6 @@
-import { Component, ViewChild } from '@angular/core'
-import { NavController} from 'ionic-angular'
-import { GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent } from '@ionic-native/google-maps';
-import { DatePipe } from '@angular/common';
 
+import { NavController} from 'ionic-angular';
+import { GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent } from '@ionic-native/google-maps';
 import { RouteModel } from '../../../models/RouteModel';
 import { RoutesService } from '../../../providers/trainings/routes.service';
 
@@ -103,12 +101,4 @@ export class RoutesPage {
                     //TODO:
                 });
     }
-
-
-
-
-
-
-
-
 }

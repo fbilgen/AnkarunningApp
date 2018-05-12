@@ -6,7 +6,6 @@ import { catchError, retry } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';
 
 import { TrainingModel } from '../../models/TrainingModel';
-import { DateTime } from 'ionic-angular';
 
 
 @Injectable()

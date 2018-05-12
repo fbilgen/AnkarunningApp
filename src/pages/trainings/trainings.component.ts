@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, LoadingController, DateTime } from 'ionic-angular';
-import { DatePipe } from '@angular/common';
 import { TrainingMapPage } from '../trainings/training.map.component';
 import { TrainingsService } from '../../providers/trainings/trainings.service';
 import { TrainingModel } from '../../models/TrainingModel';
