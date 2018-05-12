@@ -3,8 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs/Observable";
 import { of } from "rxjs/observable/of";
 import { RouteModel } from "../../models/RouteModel";
-import { retry, catchError, map } from "rxjs/operators";
-import { Route } from "@angular/compiler/src/core";
+import { retry, catchError } from "rxjs/operators";
 
 
 @Injectable()

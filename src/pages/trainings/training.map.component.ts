@@ -1,5 +1,5 @@
-import { Component, ViewChild, OnInit } from '@angular/core'
-import { NavController, NavParams } from 'ionic-angular'
+import { Component, ViewChild } from '@angular/core'
+import { NavParams } from 'ionic-angular'
 import { GoogleMap, GoogleMapOptions, GoogleMaps, GoogleMapsEvent } from '@ionic-native/google-maps';
 import { InAppBrowser } from '@ionic-native/in-app-browser'
 import { RouteModel } from '../../models/RouteModel';

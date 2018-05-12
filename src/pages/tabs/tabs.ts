@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { ClubPage } from '../club/club.component';
 import { TrainingsPage } from '../trainings/trainings.component';
 import { EventsPage } from '../events/events';
-import { PhotosPage } from '../photos/photos';
 import { RoutesPage } from '../routes/routes.component';
 import { ContactPage } from '../contact/contact.component';
 
