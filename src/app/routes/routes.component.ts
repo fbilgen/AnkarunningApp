@@ -40,7 +40,4 @@ export class RoutesPage {
                     //this.loadMapPhotos(this.routes);
                 });
     };
-
-
-
 }

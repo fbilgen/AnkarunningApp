@@ -5,13 +5,13 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
-import { TabsPage } from '../pages/tabs/tabs';
-import { ClubPage } from '../pages/club/club.component';
-import { EventsPage } from '../pages/events/events';
-import { TrainingsPage } from '../pages/trainings/trainings.component';
-import { RoutesPage } from '../pages/routes/routes.component';
-import { ContactPage } from '../pages/contact/contact.component';
-import { TrainingMapPage } from '../pages/trainings/training.map.component';
+import { TabsPage } from '../app/tabs/tabs';
+import { ClubPage } from '../app/club/club.component';
+import { EventsPage } from '../app/events/events';
+import { TrainingsPage } from '../app/trainings/trainings.component';
+import { RoutesPage } from '../app/routes/routes.component';
+import { ContactPage } from './contact/contact.component';
+import { TrainingMapPage } from './trainings/training.map.component';
 import { TrainingsService } from '../providers/trainings/trainings.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
